@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+.env*.local
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Logs and temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.log
+.tmp
+.cache
+
+# macOS system files
+.DS_Store
+
+# Compiled output
+dist/
+build/
+coverage/
+
+# Test and coverage-related files
+*.spec.js
+*.test.js
+/test
+/tests
+
+# Miscellaneous
+pids/
+*.pid
+*.seed
+*.lock

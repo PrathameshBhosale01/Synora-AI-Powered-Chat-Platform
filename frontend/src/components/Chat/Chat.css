@@ -1,0 +1,159 @@
+/* Chat.css */
+.chats {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  padding: 0 20px 80px 20px;
+}
+
+.welcome-text {
+  text-align: center;
+  margin-top: 25vh;
+  color: var(--text-main);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* User Message - Right Aligned, Teal */
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.userMessage {
+  background-color: var(--user-msg-bg);
+  color: var(--user-msg-text);
+  padding: 12px 18px;
+  border-radius: 12px 12px 2px 12px;
+  font-size: 15px;
+  line-height: 1.6;
+
+  display: inline-block;
+  max-width: 75%;
+  width: fit-content;
+
+
+  flex-shrink: 0;
+
+
+  white-space: normal;
+  word-break: break-word;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* AI Message - Left Aligned, Slate */
+.geminiDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  background-color: transparent;
+  /* No background box for container */
+  padding: 0 10px;
+  /* Slight indent */
+}
+
+/* Markdown styling within AI response */
+.geminiDiv p {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.geminiDiv strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+.geminiDiv code {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9em;
+  color: #ec4899;
+  /* Pinkish code text */
+}
+
+.geminiDiv pre {
+  background-color: #020617;
+  /* Very dark slate */
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  margin: 12px 0;
+  width: 100%;
+}
+
+.geminiDiv ul,
+.geminiDiv ol {
+  padding-left: 24px;
+  margin: 8px 0;
+}
+
+.geminiDiv li {
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+/* Animations and Hover Effects */
+@keyframes fadeInMsg {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.userDiv,
+.geminiDiv {
+  animation: fadeInMsg 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.userMessage {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.userMessage:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 255, 0, 0.15);
+  /* Neon yellow shadow */
+}
+
+/* Timestamps */
+.msg-timestamp {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  opacity: 0.7;
+}
+
+/* Typing Indicator Animation */
+.typing-dots {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s steps(4) infinite;
+  vertical-align: bottom;
+  width: 1ch;
+}
+
+@keyframes typing {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
