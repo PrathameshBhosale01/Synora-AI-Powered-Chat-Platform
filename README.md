@@ -304,7 +304,7 @@ The backend maintains conversation history in this format:
 
    ```env
    PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/asksphere
+   MONGODB_URI=mongodb://localhost:27017/synora
    JWT_SECRET=your_super_secret_jwt_key_here
    GEMINI_API_KEY=your_gemini_api_key_here
    NODE_ENV=development
@@ -504,8 +504,8 @@ Contributions are welcome! Please:
 
 ## 📧 GitHub Profile
 
-reach out at: GitHub[https://github.com/harshh3400]
-Email:[plshinde98@gmail.com]
+reach out at: GitHub[https://github.com/PrathameshBhosale01]
+Email:[bhosaleprathamesh202@gmail.com]
 
 ---
 
